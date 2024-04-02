@@ -6,33 +6,24 @@ from scrapy.crawler import CrawlerProcess
 
 class BookingSpider(scrapy.Spider):
     name = "booking"
-    start_urls = ["https://www.booking.com/"]
+    
+    start_urls = ['https://www.booking.com/searchresults.fr.html?ss=Paris&checkin=2024-04-02&checkout=2024-04-05&group_adults=2&no_rooms=1&group_children=0']
 
+       
+    # Parse function for login
     def parse(self, response):
-        # Définir les XPaths pour chaque élément
-        city_name_xpath = "//div[@class='bui-destination-header__main-content']/h1/text()"
-        city_location_xpath = "//div[@class='bui-destination-header__sub-content']/span/text()"
-
-        # Extraire les noms et les localisations des villes
-        for city in ["Mont Saint Michel", "St Malo", "Bayeux", "Le Havre", "Rouen", "Paris"]:
-            # Remplacer les espaces par des tirets dans le nom de la ville pour l'utiliser dans l'XPath
-            city_name_xpath_formatted = city_name_xpath.replace(" ", "-")
-
-            # Extraire le nom de la ville
-            city_name = response.xpath(city_name_xpath_formatted).get()
-
-            # Extraire la localisation de la ville
-            city_location = response.xpath(city_location_xpath).get()
-
-            # Afficher les résultats
-            yield {
-                "city_name": city_name,
-                "city_location": city_location,
+        print('####: RESPONSE = ')
+        print(response)
+        quotes = response.xpath('/html/body/div[4]/div/div[2]/div/div[2]/div[3]/div[2]')
+        for quote in quotes:
+            return {
+                'hotel': quote.xpath('div[4]/div[3]/div[3]/div[1]/div[2]/div/div[1]/div[1]/div/div[1]/div/h3/a/div[1]/text()').get()
             }
+        
 
 
 # Name of the file where the results will be saved
-filename = "booking.json"
+filename = "booking3.json"
 
 # If file already exists, delete it before crawling (because Scrapy will 
 # concatenate the last and new results otherwise)
