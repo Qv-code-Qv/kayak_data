@@ -1,71 +1,36 @@
-Ville,Température (°C)
-Mont Saint Michel,16.840000000000032
-St Malo,-2.8700000000000045
-Bayeux,16.140000000000043
-Le Havre,14.510000000000048
-Rouen,17.220000000000027
-Paris,16.840000000000032
-Amiens,16.340000000000032
-Lille,15.340000000000032
-Strasbourg,14.050000000000011
-Chateau du Haut Koenigsbourg,10.78000000000003
-Colmar,14.03000000000003
-Eguisheim,13.970000000000027
-Besancon,14.379999999999995
-Dijon,15.110000000000014
-Annecy,17.090000000000032
-Grenoble,18.340000000000032
-Lyon,19.890000000000043
-Gorges du Verdon,18.810000000000002
-Bormes les Mimosas,18.27000000000004
-Cassis,20.5
-Marseille,20.930000000000007
-Aix en Provence,20.060000000000002
-Avignon,21.58000000000004
-Uzes,20.360000000000014
-Nimes,20.350000000000023
-Aigues Mortes,18.230000000000018
-Saintes Maries de la mer,20.129999999999995
-Collioure,19.460000000000036
-Carcassonne,21.710000000000036
-Ariege,16.410000000000025
-Toulouse,21.970000000000027
-Montauban,22.28000000000003
-Biarritz,23.74000000000001
-Bayonne,24.340000000000032
-La Rochelle,14.980000000000018
-Mont Saint Michel,16.840000000000032
-St Malo,-2.8700000000000045
-Bayeux,16.140000000000043
-Le Havre,14.510000000000048
-Rouen,17.220000000000027
-Paris,16.840000000000032
-Amiens,16.340000000000032
-Lille,15.340000000000032
-Strasbourg,14.050000000000011
-Chateau du Haut Koenigsbourg,10.78000000000003
-Colmar,14.03000000000003
-Eguisheim,13.970000000000027
-Besancon,14.379999999999995
-Dijon,15.110000000000014
-Annecy,17.090000000000032
-Grenoble,18.340000000000032
-Lyon,19.890000000000043
-Gorges du Verdon,18.810000000000002
-Bormes les Mimosas,18.27000000000004
-Cassis,20.5
-Marseille,20.930000000000007
-Aix en Provence,20.060000000000002
-Avignon,21.58000000000004
-Uzes,20.360000000000014
-Nimes,20.350000000000023
-Aigues Mortes,18.230000000000018
-Saintes Maries de la mer,20.129999999999995
-Collioure,19.460000000000036
-Carcassonne,21.710000000000036
-Ariege,16.410000000000025
-Toulouse,21.970000000000027
-Montauban,22.28000000000003
-Biarritz,23.74000000000001
-Bayonne,24.340000000000032
-La Rochelle,14.980000000000018
+Ville,Température (°C),Météo
+Mont Saint Michel,16,Clouds
+Saint Malo,16,Rain
+Bayeux,17,Clouds
+Le Havre,16,Clouds
+Rouen,17,Clouds
+Paris,18,Clouds
+Amiens,17,Clouds
+Lille,16,Clouds
+Strasbourg,15,Rain
+Chateau du Haut Koenigsbourg,11,Clouds
+Colmar,13,Clouds
+Eguisheim,13,Clouds
+Besancon,18,Clouds
+Dijon,18,Clear
+Annecy,18,Clouds
+Grenoble,20,Clouds
+Lyon,20,Clear
+Gorges du Verdon,19,Clouds
+Bormes les Mimosas,19,Clouds
+Cassis,21,Clouds
+Marseille,21,Clear
+Aix en Provence,21,Clouds
+Avignon,22,Clear
+Uzes,21,Clouds
+Nimes,20,Clear
+Aigues Mortes,18,Clear
+Saintes Maries de la mer,20,Clouds
+Collioure,21,Clouds
+Carcassonne,23,Clear
+Ariege,17,Clouds
+Toulouse,23,Clear
+Montauban,23,Clouds
+Biarritz,24,Clouds
+Bayonne,24,Clouds
+La Rochelle,15,Clouds
