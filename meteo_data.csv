@@ -1,36 +1,36 @@
-Ville,Température (°C),Météo
-Mont Saint Michel,16,Clouds
-Saint Malo,16,Rain
-Bayeux,17,Clouds
-Le Havre,16,Clouds
-Rouen,18,Clouds
-Paris,19,Clouds
-Amiens,18,Clouds
-Lille,16,Clouds
-Strasbourg,15,Rain
-Chateau du Haut Koenigsbourg,11,Clouds
-Colmar,13,Clouds
-Eguisheim,13,Clouds
-Besancon,18,Clouds
-Dijon,18,Clear
-Annecy,18,Clouds
-Grenoble,20,Clouds
-Lyon,21,Clear
-Gorges du Verdon,19,Clouds
-Bormes les Mimosas,18,Clouds
-Cassis,21,Clouds
-Marseille,21,Clear
-Aix en Provence,21,Clouds
-Avignon,22,Clear
-Uzes,21,Clouds
-Nimes,21,Clear
-Aigues Mortes,17,Clear
-Saintes Maries de la mer,21,Clouds
-Collioure,21,Clouds
-Carcassonne,23,Clear
-Ariege,17,Clouds
-Toulouse,23,Clouds
-Montauban,23,Clouds
-Biarritz,25,Clouds
-Bayonne,25,Clouds
-La Rochelle,15,Clouds
+Ville,Température (°C),Météo principale
+Mont Saint Michel,N/A,N/A
+Saint Malo,N/A,N/A
+Bayeux,N/A,N/A
+Le Havre,N/A,N/A
+Rouen,N/A,N/A
+Paris,N/A,N/A
+Amiens,N/A,N/A
+Lille,N/A,N/A
+Strasbourg,N/A,N/A
+Chateau du Haut Koenigsbourg,N/A,N/A
+Colmar,N/A,N/A
+Eguisheim,N/A,N/A
+Besancon,N/A,N/A
+Dijon,N/A,N/A
+Annecy,N/A,N/A
+Grenoble,N/A,N/A
+Lyon,N/A,N/A
+Gorges du Verdon,N/A,N/A
+Bormes les Mimosas,N/A,N/A
+Cassis,N/A,N/A
+Marseille,N/A,N/A
+Aix en Provence,N/A,N/A
+Avignon,N/A,N/A
+Uzes,N/A,N/A
+Nimes,N/A,N/A
+Aigues Mortes,N/A,N/A
+Saintes Maries de la mer,N/A,N/A
+Collioure,N/A,N/A
+Carcassonne,N/A,N/A
+Ariege,N/A,N/A
+Toulouse,N/A,N/A
+Montauban,N/A,N/A
+Biarritz,N/A,N/A
+Bayonne,N/A,N/A
+La Rochelle,N/A,N/A
