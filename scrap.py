@@ -32,7 +32,8 @@ process = CrawlerProcess(settings = {
     'USER_AGENT': 'Chrome/97.0',
     'LOG_LEVEL': logging.INFO,
     "FEEDS": {
-        'src/' + filename: {"format": "json"},
+        'src/' + filename: {"format": "json",
+                            "encoding" : "UTF-8"}
     }
 })
 process.crawl(QuotesLogin)
