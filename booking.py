@@ -5,14 +5,18 @@ import os
 import logging
 import scrapy
 from scrapy.crawler import CrawlerProcess
+import utils
 
 class BookingLogin(scrapy.Spider):
     name = "booking"
                                                         
+    """
     start_urls = ['https://www.booking.com/searchresults.fr.html?ss=Bretagne&order=review_score_and_price&dest_id=791&dest_type=region&lang=fr&ac_langcode=fr&checkin=2024-04-04&checkout=2024-04-05&group_adults=2&no_rooms=1&group_children=0',
     'https://www.booking.com/searchresults.fr.html?ss=Annecy&dest_id=-1407760&dest_type=city&lang=fr&ac_langcode=fr&checkin=2024-04-04&checkout=2024-04-05&group_adults=2&no_rooms=1&group_children=0',
     'https://www.booking.com/searchresults.fr.html?ss=Paris&dest_id=-1456928&dest_type=city&lang=fr&ac_langcode=fr&checkin=2024-04-04&checkout=2024-04-05&group_adults=2&no_rooms=1&group_children=0']
-
+    """
+    top_dest = utils.urls_ville[:5]
+    start_urls = top_dest[]
     def parse(self, response):
         url=response.request.url
                                                            
