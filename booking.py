@@ -1,44 +1,44 @@
+import re
+from urllib.parse import unquote
+import unicodedata
 import os 
 import logging
 import scrapy
 from scrapy.crawler import CrawlerProcess
 
-
-class BookingSpider(scrapy.Spider):
+class BookingLogin(scrapy.Spider):
     name = "booking"
-    
-    start_urls = ['https://www.booking.com/searchresults.fr.html?ss=Paris&checkin=2024-04-02&checkout=2024-04-05&group_adults=2&no_rooms=1&group_children=0']
+                                                        
+    start_urls = ['https://www.booking.com/searchresults.fr.html?ss=Bretagne&order=review_score_and_price&dest_id=791&dest_type=region&lang=fr&ac_langcode=fr&checkin=2024-04-04&checkout=2024-04-05&group_adults=2&no_rooms=1&group_children=0',
+    'https://www.booking.com/searchresults.fr.html?ss=Annecy&dest_id=-1407760&dest_type=city&lang=fr&ac_langcode=fr&checkin=2024-04-04&checkout=2024-04-05&group_adults=2&no_rooms=1&group_children=0',
+    'https://www.booking.com/searchresults.fr.html?ss=Paris&dest_id=-1456928&dest_type=city&lang=fr&ac_langcode=fr&checkin=2024-04-04&checkout=2024-04-05&group_adults=2&no_rooms=1&group_children=0']
 
-       
-    # Parse function for login
     def parse(self, response):
-        print('####: RESPONSE = ')
-        print(response)
-        quotes = response.xpath('/html/body/div[4]/div/div[2]/div/div[2]/div[3]/div[2]')
-        for quote in quotes:
-            return {
-                'hotel': quote.xpath('div[4]/div[3]/div[3]/div[1]/div[2]/div/div[1]/div[1]/div/div[1]/div/h3/a/div[1]/text()').get()
-            }
-        
-
-
-# Name of the file where the results will be saved
-filename = "booking3.json"
-
-# If file already exists, delete it before crawling (because Scrapy will 
-# concatenate the last and new results otherwise)
-if filename in os.listdir('src/'):
-        os.remove('src/' + filename)
-
-
+        url=response.request.url
+                                                           
+        appts = response.xpath('//div[@class ="d4924c9e74"]//div[@aria-label = "Établissement"][position() < 11]')        
+        for appt in appts:
+          yield {
+            'dest' : (re.split('=',url)[1].split('&')[0]),
+            'hostel': (appt.xpath('.//div[@data-testid = "title"]/text()').get()),
+            #'price' : (appt.xpath('.//div[contains(@data-testid, "availability-rate-information")]//span/text()').get()),
+            'website' :(appt.xpath('.//a/@href').get()),
+            'score': (appt.xpath('.//div[contains(@data-testid,"rating-")]/ancestor::div[@tabindex = "0"]/@aria-label').get()),
+            #'desc' : (appt.xpath('.//div[@data-testid = "recommended-units"]//div//h4/text()').get()) 
+            'desc' :  appt.xpath('.//div[@class = "abf093bdfe"]/text()').get() 
+          }        
+                    
+filename = "booking.json"
+if filename in os.listdir('out/'):
+        os.remove('out/' + filename)
 process = CrawlerProcess(settings = {
     'USER_AGENT': 'Chrome/97.0',
     'LOG_LEVEL': logging.INFO,
     "FEEDS": {
-        'src/' + filename: {"format": "json"},
+         ('out/') + filename: {"format": "json",
+                            "encoding" : "UTF-8"},
+                          
     }
 })
-
-# Start the crawling using the spider you defined above
-process.crawl(BookingSpider)
+process.crawl(BookingLogin)
 process.start()
