@@ -9,7 +9,7 @@ import utils
 
 class BookingLogin(scrapy.Spider):
     name = "booking"
-    
+
     # TODO : define top 5 destination list
     top_dest = utils.urls_ville[:5]
     start_urls = top_dest
