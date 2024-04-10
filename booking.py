@@ -1,6 +1,6 @@
+#from urllib.parse import unquote
+#import unicodedata
 import re
-from urllib.parse import unquote
-import unicodedata
 import os 
 import logging
 import scrapy
@@ -9,14 +9,10 @@ import utils
 
 class BookingLogin(scrapy.Spider):
     name = "booking"
-
-    # TODO : define top 5 destination list
-    top_dest = utils.urls_ville[:5]
-    start_urls = top_dest
+    start_urls = utils.start_urls
     def parse(self, response):
-        url=response.request.url
-                                                           
-        appts = response.xpath('//div[@class ="d4924c9e74"]//div[@aria-label = "Établissement"][position() < 11]')        
+        url=response.request.url                                                           
+        appts = response.xpath('//div[@class ="d4924c9e74"]//div[@aria-label = "Établissement"][position() < 21]')        
         for appt in appts:
           yield {
             'dest' : (re.split('=',url)[1].split('&')[0]),
@@ -29,16 +25,16 @@ class BookingLogin(scrapy.Spider):
           }        
                     
 filename = "booking.json"
-if filename in os.listdir('out/'):
-        os.remove('out/' + filename)
+if filename in os.listdir('fichier_final/'):
+        os.remove('fichier_final/' + filename)
 process = CrawlerProcess(settings = {
     'USER_AGENT': 'Chrome/97.0',
     'LOG_LEVEL': logging.INFO,
     "FEEDS": {
-         ('out/') + filename: {"format": "json",
-                            "encoding" : "UTF-8"},
-                          
+         ('fichier_final/') + filename: {"format": "json",
+                            "encoding" : "UTF-8"},                          
     }
 })
-process.crawl(BookingLogin)
+book = BookingLogin
+process.crawl(book)
 process.start()
