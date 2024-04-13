@@ -134,9 +134,12 @@ for (dest, id, lat, long, url) in zip(villes, range(len(villes)), gps_lat, gps_l
 #car à l'initialisation créé un élément vide
 del villes_infos[0]
 
-start_urls = []
-df = pd.read_csv("fichier_final/top_dest.csv")
+start_urls = urls_ville
+"""
+#start_urls = []
+#df = pd.read_csv("fichier_final/top_dest.csv")
 for index, row in df.iterrows():
     start_urls = start_urls + ([sub['url'] for sub in villes_infos if sub['dest'] == row['destination']])
 print(len(start_urls))
 print(start_urls)
+"""
