@@ -5,10 +5,12 @@ import scrapy
 from scrapy.http import Request
 from scrapy.crawler import CrawlerProcess
 import utils
+import pandas as pd
 
 class BookingSpider(scrapy.Spider):
     name = "Hostels"
-    #TODO : récupérer les 5 meilleures villes
+    #Top 5 des meilleures destinations
+    df_top_five = pd.read_csv("top_five_weather.csv")
     start_urls = utils.start_urls[22:26:2]
     def parse(self, response):
         url=response.request.url
