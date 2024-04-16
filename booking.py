@@ -1,15 +1,27 @@
 import re
 import os 
 import logging
+import boto3.session
 import scrapy
 from scrapy.http import Request
 from scrapy.crawler import CrawlerProcess
 import utils
+#Will be necessary to read the dataset from a public file stored on S3 from pandas
+#!pip install s3fs
+import my_key as key
+import pandas as pd
+import os
+import logging
+import boto3
+
+AWS_ACCESS_KEY_ID = "key.aws_access_key_id"
+AWS_SECRET_ACCESS_KEY ="key.aws_secret_access_key"
+REGION_NAME = "eu-west-3"
 
 class BookingSpider(scrapy.Spider):
     name = "Hostels"
     #TODO : récupérer les 5 meilleures villes
-    start_urls = utils.start_urls[22:26:2]
+    start_urls = utils.start_urls[26:30:2]
     def parse(self, response):
         url=response.request.url
         #liste des hôtels limitée au nb de sélection : à modifier (3 -->21)
@@ -72,3 +84,14 @@ process = CrawlerProcess(settings = {
 })
 process.crawl(BookingSpider)
 process.start()
+
+#sauvegarde du résultat dans data lake (aws-s3)
+logging.getLogger('botocore').setLevel(logging.INFO)
+logging.getLogger('boto3').setLevel(logging.INFO)
+session = boto3.session(aws_access_key_id = AWS_ACCESS_KEY_ID,
+                        aws_secret_access_key = AWS_SECRET_ACCESS_KEY)
+s3 = session.client("S3")
+bucket = s3.Bucket ("Jehda-2024-PS-")
+bucket.upload_file("fichier_final/booking.json",
+                   "Project_KAYAK/files/booking.json"
+)

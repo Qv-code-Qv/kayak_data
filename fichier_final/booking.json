@@ -1,38 +1,6 @@
 [
-  {
-    "ville": "Lille",
-    "name": "Moxy Lille City",
-    "website": "https://www.booking.com/hotel/fr/moxy-lille-city-center-france.fr.html?label=gen173nr-1FCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AvGX0LAGwAIB0gIkMzJhZGM0ZjAtMWU0MC00YTEzLTg5OGQtZDc0M2Q3MzEyNGU32AIF4AIB&aid=304142&ucfs=1&arphpl=1&dest_id=-1447079&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=class_asc&nflt=review_score%3D80&srpvid=5f4c2b8f13bf0099&srepoch=1712988704&from_sustainable_property_sr=1&from=searchresults#hotelTmpl",
-    "score": "3 sur 5",
-    "desc": "Idéalement situé à Lille, le Moxy Lille City propose des chambres climatisées, une salle de sport, une terrasse et une connexion Wi-Fi gratuite. Cet établissement 3 étoiles est doté d’un bar. ",
-    "lat": "50.62783100",
-    "lon": "3.06359200"
-  },
-  {
-    "ville": "Marseille",
-    "name": "NOCNOC - L'Haussmanien",
-    "website": "https://www.booking.com/hotel/fr/l-39-haussmanien.fr.html?label=gen173nr-1FCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AvGX0LAGwAIB0gIkMzJhZGM0ZjAtMWU0MC00YTEzLTg5OGQtZDc0M2Q3MzEyNGU32AIF4AIB&aid=304142&ucfs=1&arphpl=1&dest_id=-1449947&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=class_asc&nflt=review_score%3D80&srpvid=ac242b8fdecf00d7&srepoch=1712988704&from=searchresults#hotelTmpl",
-    "score": "1 sur 5",
-    "desc": "Situé à Marseille, en Provence-Alpes-Côte d'Azur, le NOCNOC - L'Haussmanien dispose d'un balcon et offre une vue calme sur la rue. ",
-    "lat": "43.30065500",
-    "lon": "5.38129200"
-  },
-  {
-    "ville": "Marseille",
-    "name": "Hôtel Hermès",
-    "website": "https://www.booking.com/hotel/fr/hermes.fr.html?label=gen173nr-1FCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AvGX0LAGwAIB0gIkMzJhZGM0ZjAtMWU0MC00YTEzLTg5OGQtZDc0M2Q3MzEyNGU32AIF4AIB&aid=304142&ucfs=1&arphpl=1&dest_id=-1449947&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=2&hapos=2&sr_order=class_asc&nflt=review_score%3D80&srpvid=ac242b8fdecf00d7&srepoch=1712988704&from=searchresults#hotelTmpl",
-    "score": "2 sur 5",
-    "desc": "L'hôtel Hermès se situe à seulement 35 mètres du Vieux-Port, dans le centre de Marseille. Il dispose d'une connexion Wi-Fi gratuite et d'un toit-terrasse avec vue panoramique sur le port et la ville. ",
-    "lat": "43.29655283",
-    "lon": "5.37188329"
-  },
-  {
-    "ville": "Lille",
-    "name": "Hotel Chagnot",
-    "website": "https://www.booking.com/hotel/fr/hotel-balladins-superior-lille-centre.fr.html?label=gen173nr-1FCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AvGX0LAGwAIB0gIkMzJhZGM0ZjAtMWU0MC00YTEzLTg5OGQtZDc0M2Q3MzEyNGU32AIF4AIB&aid=304142&ucfs=1&arphpl=1&dest_id=-1447079&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=2&hapos=2&sr_order=class_asc&nflt=review_score%3D80&srpvid=5f4c2b8f13bf0099&srepoch=1712988704&from=searchresults#hotelTmpl",
-    "score": "3 sur 5",
-    "desc": "L'Hotel Chagnot est situé dans le centre-ville de Lille, juste en face de la gare de Lille-Flandres et à 10 minutes à pied de la gare de Lille-Europe. ",
-    "lat": "50.63624596",
-    "lon": "3.06924239"
-  }
+{"ville": "Montauban", "name": "L'Amarelo", "website": "https://www.booking.com/hotel/fr/amarelo.fr.html?label=gen173nr-1FCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AvGX0LAGwAIB0gIkMzJhZGM0ZjAtMWU0MC00YTEzLTg5OGQtZDc0M2Q3MzEyNGU32AIF4AIB&aid=304142&ucfs=1&arphpl=1&dest_id=-1452421&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=2&hapos=2&sr_order=class_asc&nflt=review_score%3D80&srpvid=83f69d0214b50305&srepoch=1713133190&from=searchresults#hotelTmpl", "score": "2 sur 5", "desc": "Hébergement géré par un particulier", "lat": "44.02130840", "lon": "1.35122370"},
+{"ville": "Paris", "name": "Résidence Palais Étoile", "website": "https://www.booking.com/hotel/fr/residence-palais-etoile.fr.html?label=gen173nr-1FCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AvGX0LAGwAIB0gIkMzJhZGM0ZjAtMWU0MC00YTEzLTg5OGQtZDc0M2Q3MzEyNGU32AIF4AIB&aid=304142&ucfs=1&arphpl=1&dest_id=-1456928&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=2&hapos=2&sr_order=class_asc&nflt=review_score%3D80&srpvid=6a7f9d0270c40084&srepoch=1713133190&from=searchresults#hotelTmpl", "score": "1 sur 5", "desc": "Située à Paris, la Résidence Palais Étoile propose des appartements indépendants en face du Palais des Congrès de la Porte Maillot. ", "lat": "48.87838937", "lon": "2.28467211"},
+{"ville": "Paris", "name": "Hotel Zora", "website": "https://www.booking.com/hotel/fr/zora.fr.html?label=gen173nr-1FCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AvGX0LAGwAIB0gIkMzJhZGM0ZjAtMWU0MC00YTEzLTg5OGQtZDc0M2Q3MzEyNGU32AIF4AIB&aid=304142&ucfs=1&arphpl=1&dest_id=-1456928&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=class_asc&nflt=review_score%3D80&srpvid=6a7f9d0270c40084&srepoch=1713133190&from=searchresults#hotelTmpl", "score": "1 sur 5", "desc": "Situé à 800 mètres du centre Pompidou, l'Hotel Zora propose des hébergements à Paris dotés d'une connexion Wi-Fi gratuite. ", "lat": "48.86645888", "lon": "2.34674074"},
+{"ville": "Montauban", "name": "Le Studio", "website": "https://www.booking.com/hotel/fr/le-studio-montauban.fr.html?label=gen173nr-1FCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AvGX0LAGwAIB0gIkMzJhZGM0ZjAtMWU0MC00YTEzLTg5OGQtZDc0M2Q3MzEyNGU32AIF4AIB&aid=304142&ucfs=1&arphpl=1&dest_id=-1452421&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=class_asc&nflt=review_score%3D80&srpvid=83f69d0214b50305&srepoch=1713133190&from=searchresults#hotelTmpl", "score": "1 sur 5", "desc": "Hébergement géré par un particulier", "lat": "44.02135469", "lon": "1.35128807"}
 ]
