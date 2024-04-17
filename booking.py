@@ -9,13 +9,11 @@ import pandas as pd
 
 class BookingSpider(scrapy.Spider):
     name = "Hostels"
-    #Top 5 des meilleures destinations
-    df_top_five = pd.read_csv("top_five_weather.csv")
-    start_urls = utils.start_urls[22:26:2]
+    start_urls = utils.url_villes
     def parse(self, response):
         url=response.request.url
-        #liste des hôtels limitée au nb de sélection : à modifier (3 -->21)
-        hostels = response.xpath('//div[@class ="d4924c9e74"]//div[@aria-label = "Établissement"][position() < 3]')    
+        #liste des hôtels par ville = 20
+        hostels = response.xpath('//div[@class ="d4924c9e74"]//div[@aria-label = "Établissement"][position() < 21]')    
         for hostel in hostels:
             ville = (re.split('=',url)[1].split('&')[0])
             hostel_name = hostel.xpath('.//div[@data-testid = "title"]/text()').get()

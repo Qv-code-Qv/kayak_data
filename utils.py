@@ -37,7 +37,7 @@ villes = ['Aigues Mortes',
            'Uzes'
           ]
 
-urls_ville = [
+url_villes = [
     "https://www.booking.com/searchresults.fr.html?ss=Aigues-Mortes%2C+Languedoc-Roussillon%2C+France&efdco=1&label=gen173nr-1FCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AoKD0LAGwAIB0gIkYTAwNTk0MWMtNTUyYS00YmM2LThmNDQtY2RmMmI3YzQwMTc52AIF4AIB&aid=304142&lang=fr&sb=1&src_elem=sb&src=index&dest_id=-1406800&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=fr&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=3832670114890016&ac_meta=GhAzODMyNjcwMTE0ODkwMDE2IAAoATICZnI6DUFpZ3VlcyBNb3J0ZXNAAEoAUAA%3D&group_adults=2&no_rooms=1&group_children=0",
     "https://www.booking.com/searchresults.fr.html?ss=Aix+en+Provence&label=gen173rf-1FCAEoggI46AdIDVgDaE2IAQGYAQ24ARfIAQzYAQHoAQH4AQKIAgGiAhBzZWFyY2guYnJhdmUuY29tqAIDuAKLldCwBsACAdICJGI4Yjk0MjU0LWJmN2ItNGVmMi1hODkzLWI1NzE0YzZiODgwNdgCBeACAQ&aid=304142&lang=fr&sb=1&src_elem=sb&src=index&dest_id=-1406939&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=fr&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=3f026b859bd2007e&ac_meta=GhAzZjAyNmI4NTliZDIwMDdlIAAoATICZnI6D0FpeCBlbiBQcm92ZW5jZUAASgBQAA%3D%3D&group_adults=2&no_rooms=1&group_children=0",
     "https://www.booking.com/searchresults.fr.html?ss=Amiens&label=gen173rf-1FCAEoggI46AdIDVgDaE2IAQGYAQ24ARfIAQzYAQHoAQH4AQKIAgGiAhBzZWFyY2guYnJhdmUuY29tqAIDuAKLldCwBsACAdICJGI4Yjk0MjU0LWJmN2ItNGVmMi1hODkzLWI1NzE0YzZiODgwNdgCBeACAQ&aid=304142&lang=fr&sb=1&src_elem=sb&src=index&dest_id=-1407447&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=fr&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=3f026b859bd2007e&ac_meta=GhAzZjAyNmI4NTliZDIwMDdlIAAoATICZnI6BkFtaWVuc0AASgBQAA%3D%3D&group_adults=2&no_rooms=1&group_children=0",
@@ -79,9 +79,9 @@ urls_ville = [
 params_url_note_8plus_order_by_categorie = "&nflt=review_score%3D80&order=class_asc"
 
 #compose urls avec les paramètres supplémentaires
-for i  in range(len(urls_ville)):
-    urls_ville[i] = urls_ville[i] + params_url_note_8plus_order_by_categorie
-#print(urls_ville)
+for i  in range(len(url_villes)):
+    url_villes[i] = url_villes[i] + params_url_note_8plus_order_by_categorie
+#print(url_villes)
 
 #coordonnées gps des villes
 gps_ville = [('Aigues Mortes', '43.5661521', '4.19154'), 
@@ -129,17 +129,7 @@ for ville,lat, long in gps_ville:
 #Crée une Map ville_infos : {dest, id, lat, long, url}
 keys = ['dest', 'id', 'lat', 'long', 'url']
 villes_infos = [{}]
-for (dest, id, lat, long, url) in zip(villes, range(len(villes)), gps_lat, gps_long, urls_ville):
+for (dest, id, lat, long, url) in zip(villes, range(len(villes)), gps_lat, gps_long, url_villes):
     villes_infos.append(dict(zip(keys,(dest, id, lat, long, url))))
 #car à l'initialisation créé un élément vide
 del villes_infos[0]
-
-start_urls = urls_ville
-"""
-#start_urls = []
-#df = pd.read_csv("fichier_final/top_dest.csv")
-for index, row in df.iterrows():
-    start_urls = start_urls + ([sub['url'] for sub in villes_infos if sub['dest'] == row['destination']])
-print(len(start_urls))
-print(start_urls)
-"""
